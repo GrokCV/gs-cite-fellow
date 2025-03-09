@@ -2772,3 +2772,183 @@ Wulf William A
 William A Wulf
 Zadeh L A
 L A Zadeh
+Maneesh Agrawala
+Anima Anandkumar
+David Atienza
+Boaz Barak
+Michel Beaudouin-Lafon
+Peter Boncz
+Luis Ceze
+Ranveer Chandra
+Nitesh Chawla
+Ed Chi
+Corinna Cortes
+Bill Curtis
+Constantinos Daskalakis
+Kalyanmoy Deb
+Bronis R. De Supinski
+Sebastian Elbaum
+Yuguang Fang
+Kevin Fu
+Craig Gotsman
+Ahmed E. Hassan
+Abdelsalam Helal
+Jörg Henkel
+Manuel V. Hermenegildo
+Michael Hicks
+Torsten Hoefler
+Jason I. Hong
+Sandy Irani
+Hiroshi Ishii
+Alfons Kemper
+Samir Khuller
+Farinaz Koushanfar
+C.-C. Jay Kuo
+Hang Li
+Jimmy Lin
+Radu Marculescu
+Mei Hong
+David Mount
+Gonzalo Navarro
+Rafael Pass
+Marc Pollefeys
+Alex Pothen
+Moinuddin Qureshi
+Ashutosh Sabharwal
+Timothy Sherwood
+Stefano Soatto
+John Stasko
+Zhendong Su
+Gary Sullivan
+Jaime Teevan
+Kentaro Toyama
+René Vidal
+Eric Xing
+Dong Yu
+Yizhou Yu
+Haitao Zheng
+Wenwu Zhu
+Denis Zorin
+Aditya Akella
+Michael Backes
+Vineet Bafna
+Yoshua Bengio
+Maria-Florina Balcan
+Nikhil Bansal
+Mikhail Belkin
+Shai Ben-David
+Vaughn Timothy Betz
+Ramón Cáceres
+Chandra Chekuri
+Haibo Chen
+Yingying Chen
+Kenneth Ward Church
+Roger Dannenberg
+Xin Luna Dong
+Rolf Drechsler
+Wenliang Du
+Pradeep Dubey
+Anja Feldmann
+George Fitzmaurice
+Fedor Fomin
+Jeffrey S. Foster
+Jianfeng Gao
+Ian Goldberg
+Sumit Gulwani
+Zhu Han
+Geoffrey Hinton
+Nicole Immorlica
+Trent Jaeger
+Kenneth Koedinger
+Andreas Krause
+Christopher Ian Kruegel
+H. T. Kung
+Yann LeCun
+Tim Berners-Lee
+David Lo
+Wenjing Lou
+Kwan-Liu Ma
+Wei-Ying Ma
+Z. Morley Mao
+Deborah McGuinness
+Gérard G. Medioni
+Sharad Mehrotra
+Joseph Seffi Naor
+Shrikanth Narayanan
+Natasha Noy
+Corina Păsăreanu
+Massoud Pedram
+Anand Raghunathan
+Benjamin Raphael
+Dana Ron
+Tim Roughgarden
+David Sankoff
+Stefan Saroiu
+Albrecht Schmidt
+Björn Schuller
+Phoebe Sengers
+Elaine Shi
+Noah Snavely
+Ram D. Sriram
+Steffen Staab
+Alex Szalay
+Manik Varma
+XiaoFeng Wang
+Kilian Weinberger
+Emmett Witchel
+Xing Xie
+Marc Alexa
+Marcelo Arenas
+Michael Bailey
+Arindam Banerjee
+Clark Barrett
+Susanne Bødker
+Satish Chandra
+Marsha Chechik
+Lei Chen
+Wei Chen
+Carla Fabiana Chiasserini
+Fred Chong
+Diane Joyce Cook
+Stephen David Crocker
+Brian Curless
+Luca de Alfaro
+Maarten de Rijke
+Edward J. Delp
+Falko Dressler
+Derek Dreyer
+Niklas Elmqvist
+Michal Feldman
+Nate Foster
+Ashish Goel
+Sudipto Guha
+Jeffrey Michael Heer
+Russell Housley
+Scott Hudson
+Mohan Kankanhalli
+Irwin King
+Cliff Lampe
+Stefano Leonardi
+Guoliang Li
+Azad M. Madni
+Tim J. Menzies
+Mira Mezini
+Sudip Misra
+Bashar A. Nuseibeh
+Peter W. O'Hearn
+Fatma Ozcan
+Rasmus Pagh
+Dhabaleswar K. Panda
+Naren Ramakrishnan
+Dana Randall
+Abhik Roychoudhury
+Claudio T. Silva
+Thad Starner
+Qi Tian
+Anwar Walid
+Haixun Wang
+Guoliang Xing
+Feng Zhao
+Jingren Zhou
+Justin Zobel
+Benjamin G. Zorn
