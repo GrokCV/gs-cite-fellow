@@ -50,15 +50,14 @@ def main():
                     "fellow_conference": " ".join(conference_list),
                 }
 
-    writer = pd.ExcelWriter("result/result.xls")
+    writer = pd.ExcelWriter("result/result.xlsx", engine="openpyxl")
     df.to_excel(
         writer,
         columns=["article", "cite_article", "fellow", "fellow_conference"],
         index=False,
-        encoding="utf-8",
         sheet_name="Sheet1",
     )
-    writer.save()
+    writer.close()
 
     df = pd.DataFrame(columns=["author", "conference"])
     for author, conference_set in fellow_result.items():
@@ -68,9 +67,9 @@ def main():
             "author": author,
             "conference": " ".join(conference_list),
         }
-    writer = pd.ExcelWriter("result/fellow.xls")
-    df.to_excel(writer, index=False, encoding="utf-8", sheet_name="Sheet1")
-    writer.save()
+    writer = pd.ExcelWriter("result/fellow.xlsx", engine="openpyxl")
+    df.to_excel(writer, index=False, sheet_name="Sheet1")
+    writer.close()
 
 
 if __name__ == "__main__":

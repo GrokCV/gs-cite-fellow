@@ -1,4 +1,6 @@
 {
-    "scholar_id": "",
-    "driver_path": "D:\\Program Files\\chromedriver_win32\\chromedriver.exe"
+  "scholar_id": "",
+  "citation_threshold": 100,
+  "citation_limit": 1000,
+  "driver_path": "/opt/homebrew/bin/chromedriver"
 }

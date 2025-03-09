@@ -14,13 +14,17 @@ def fetch():
     for article_id, article in enumerate(articles):
         info = {
             "article_id": article_id,
-            "name": article.find_all('a')[0].text,
-            "cite_url": article.find_all('a')[1]['href']
+            "name": article.find_all("a")[0].text,
+            "cite_url": article.find_all("a")[1]["href"],
+            "cites": (
+                int(article.find_all("a")[1].text)
+                if article.find_all("a")[1].text
+                else 0
+            ),
         }
         article_infos.append(info)
     save_json(article_infos, "data/articles.json")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     fetch()
-

@@ -2,3 +2,5 @@ bs4
 requests
 selenium
 pandas
+webdriver-manager
+openpyxl
