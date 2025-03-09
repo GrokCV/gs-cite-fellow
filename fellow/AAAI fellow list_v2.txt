@@ -152,3 +152,63 @@ Holly Yanco
 Qiang Yang
 Zhou Zhi-Hua
 Shlomo Zilberstein
+Peter Stuckey
+Jiebo Luo
+Huan Liu
+Charles Isbell
+Kristen Grauman
+Luc De Raedt
+Vincent Conitzer
+Sylvie Thiébaux
+Thomas Schiex
+Dragomir Radev
+Martha Palmer
+Natasha Noy
+Radhika Nagpal
+Yann LeCun
+William T. Freeman
+Cynthia Breazeal
+Yoshua Bengio
+Holly Yanco
+Antonio Torralba
+Rada Mihalcea
+Hiroaki Kitano
+Odest Chadwicke Jenkins
+Ayanna Howard
+Jörg Hoffmann
+Malte Helmert
+Ashok Goel
+Michael Bowling
+Shuicheng Yan
+Peter Wurman
+Mary-Anne Williams
+David Silver
+Cynthia Rudin
+Lynne E. Parker
+Barry O’Sullivan
+Kristina Lerman
+Pascale Fung
+Innderjit Dhillon
+Kiri Wagstaff
+Jie Tang
+Csaba Szepesvàri
+Matthias Scheutz
+Ronald Parr
+Ana Paiva
+Risto Miikkulainen
+Deborah McGuinness
+Xuelong Li
+Vipin Kumar
+Kristian Hammond
+Jun Zhu
+Kilian Weinberger
+Brian Scassellati
+Ariel Procaccia
+Mausam
+Kristian Kersting
+Ariel Felner
+Jennifer Dy
+Cristina Conati
+Nitesh Chawla
+Claire Cardie
+Anima Anandkumar

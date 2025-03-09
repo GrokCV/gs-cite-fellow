@@ -279,3 +279,45 @@ Huaguang Zhang
 Guoying Zhao
 Jie Zhou
 Zhi-Hua Zhou
+Rajendra Acharya
+Yiu-ming Cheung
+Michael Joachim Paulus Felsberg
+Clinton Fookes
+Rongrong Ji
+Lianwen Jin
+Mohan Kankanhalli
+Xi Li
+Shengcai Liao
+Qingshan Liu
+Sébastien Marcel
+João Paulo Papa
+Vishal M. Patel
+Yu Qiao
+Elisa Ricci
+Yoichi Sato
+Zhen Wang
+Junchi Yan
+Yi Yang
+Zhaoxiang Zhang
+Wei-Shi Zheng
+Marco Cristani
+Sergio Escalera
+Junwei Han
+Jungong Han
+Kaiqi Huang
+Tingwen Huang
+Yu-Gang Jiang
+Reinhard Koch
+Zhen Lei
+Liang Lin
+Siwei Lyu
+Ajmal Saeed Mian
+Hiroshi Murase
+Liqiang Nie
+Guo-Jun Qi
+Carlo Sansone
+Jinhui Tang
+Mayank Vatsa
+Xiaojun Wu
+Gary G. Yen
+Zhongfei Zhang
