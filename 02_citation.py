@@ -5,6 +5,7 @@ from bs4 import BeautifulSoup
 import time
 import json
 import sys
+import re
 from utils import load_json, save_json
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
@@ -31,7 +32,11 @@ def main():
 
 
 def get_all_cite_name_list(d, base_url, name, article_id, new_articles):
-    all_cite_name_list = []
+    # 加载配置文件获取 citation_since_year
+    config = load_json("config.json")
+    citation_since_year = config.get("citation_since_year", 0)
+
+    all_cite_info_list = []
     for start in range(0, 100000, 10):
         print("Page {}".format(start // 10))
         url = get_specify_url(base_url, start)
@@ -47,10 +52,10 @@ def get_all_cite_name_list(d, base_url, name, article_id, new_articles):
                 print(f"等待 {delay:.2f} 秒...")
                 time.sleep(delay)
 
-                cite_name_list = get_cite_name_list(d)
+                cite_info_list = get_cite_name_list(d)
 
                 # 如果成功获取到数据，跳出重试循环
-                if cite_name_list:
+                if cite_info_list:
                     break
 
                 # 如果没有获取到数据但不是因为到达末页，可能是被反爬
@@ -65,21 +70,38 @@ def get_all_cite_name_list(d, base_url, name, article_id, new_articles):
                     time.sleep(random.uniform(1, 2))
 
         # 如果重试后仍然没有数据，可能是到达了末页
-        if len(cite_name_list) == 0:
+        if len(cite_info_list) == 0:
             print("没有更多数据，可能已到达末页")
             break
 
-        all_cite_name_list.extend(cite_name_list)
+        # 过滤出符合年份要求的引用
+        filtered_cite_info_list = [
+            info
+            for info in cite_info_list
+            if info["year"] is not None and info["year"] >= citation_since_year
+        ]
+
+        if filtered_cite_info_list:
+            print(
+                f"获取到 {len(cite_info_list)} 条引用，其中 {len(filtered_cite_info_list)} 条符合年份要求（>= {citation_since_year}）"
+            )
+            all_cite_info_list.extend(filtered_cite_info_list)
+        else:
+            print(
+                f"获取到 {len(cite_info_list)} 条引用，但没有符合年份要求（>= {citation_since_year}）的数据"
+            )
 
         # 每处理一页就保存一次结果，避免中途失败导致数据丢失
         new_articles[article_id]["cite_list"] = []
-        for cite_name in all_cite_name_list:
-            new_articles[article_id]["cite_list"].append({"title": cite_name})
-            print(cite_name)
+        for cite_info in all_cite_info_list:
+            new_articles[article_id]["cite_list"].append(
+                {"title": cite_info["title"], "year": cite_info["year"]}
+            )
+            print(f"{cite_info['title']} ({cite_info['year']})")
         save_json(new_articles, "data/articles.json")
 
         # 每页之间添加随机延迟，避免频繁请求
-        if len(cite_name_list) > 0:  # 如果还有下一页
+        if len(cite_info_list) > 0:  # 如果还有下一页
             delay = random.uniform(1, 2)
             print(f"准备获取下一页，等待 {delay:.2f} 秒...")
             time.sleep(delay)
@@ -210,7 +232,7 @@ def get_cite_name_list(d):
     if not articles:
         articles = main_element.find_all(name="div", attrs={"class": "gs_or"})
 
-    cite_name_list = []
+    cite_info_list = []
     for article in articles:
         try:
             # 尝试找到标题元素
@@ -218,15 +240,26 @@ def get_cite_name_list(d):
             if title_elem is None:
                 title_elem = article.find(name="h3", attrs={"class": "gs_ti"})
 
+            # 尝试找到年份信息
+            year = None
+            footer_elem = article.find(name="div", attrs={"class": "gs_a"})
+            if footer_elem:
+                footer_text = footer_elem.text
+                # 年份通常在文本的末尾，格式为四位数字
+                year_match = re.search(r"(\d{4})", footer_text)
+                if year_match:
+                    year = int(year_match.group(1))
+
             if title_elem:
                 name = title_elem.text
-                cite_name_list.append(name)
+                cite_info = {"title": name, "year": year}
+                cite_info_list.append(cite_info)
             else:
                 print("无法找到文章标题元素")
         except Exception as e:
             print(f"处理文章时出错: {e}")
 
-    return cite_name_list
+    return cite_info_list
 
 
 if __name__ == "__main__":

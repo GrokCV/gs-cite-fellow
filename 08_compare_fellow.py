@@ -18,7 +18,13 @@ def main():
     }
 
     df = pd.DataFrame(
-        columns=["article", "cite_article", "fellow", "fellow_conference"]
+        columns=[
+            "article",
+            "cite_article",
+            "fellow",
+            "fellow_conference",
+            "cite_article_year",
+        ]
     )
     fellow_result = defaultdict(set)
     my_articles = [a["name"] for a in articles]
@@ -32,6 +38,7 @@ def main():
                 continue
             authors = cite_article["author"]
             cite_article_title = cite_article["title"]
+            cite_article_year = cite_article["year"]
             for author in authors:
                 conference_list = []
                 for conference, fellow in fellow_dict.items():
@@ -48,15 +55,23 @@ def main():
                     "cite_article": cite_article_title,
                     "fellow": author,
                     "fellow_conference": " ".join(conference_list),
+                    "cite_article_year": cite_article_year,
                 }
 
     writer = pd.ExcelWriter("result/result.xlsx", engine="openpyxl")
     df.to_excel(
         writer,
-        columns=["article", "cite_article", "fellow", "fellow_conference"],
+        columns=[
+            "article",
+            "cite_article",
+            "fellow",
+            "fellow_conference",
+            "cite_article_year",
+        ],
         index=False,
         sheet_name="Sheet1",
     )
+    writer.save()
     writer.close()
 
     df = pd.DataFrame(columns=["author", "conference"])
@@ -69,6 +84,7 @@ def main():
         }
     writer = pd.ExcelWriter("result/fellow.xlsx", engine="openpyxl")
     df.to_excel(writer, index=False, sheet_name="Sheet1")
+    writer.save()
     writer.close()
 
 

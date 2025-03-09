@@ -1,6 +1,7 @@
 {
-  "scholar_id": "",
+  "scholar_id": "y5Ov6VAAAAAJ",
   "citation_threshold": 100,
-  "citation_limit": 1000,
+  "citation_limit": 10000,
+  "citation_since_year": 2022,
   "driver_path": "/opt/homebrew/bin/chromedriver"
 }
