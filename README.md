@@ -18,7 +18,7 @@ This project is used to find all Fellows who have cited the scholar's article.
 1. **Added random wait time within 2 seconds**: This helps mitigate triggering anti-crawling mechanisms. If the same IP triggers the mechanism frequently, changing the local proxy IP is necessary. Adjusting this time can balance program speed and anti-crawling measures.
 2. **Added `citation_threshold` (lower limit) and `citation_limit` (upper limit)**: These can be configured in the configuration file to filter out papers that do not meet citation conditions, making it easier to select relevant papers.
 3. **Added missing Fellow lists from recent years**, including IEEE Fellow, ACM Fellow, AAAI Fellow, and IAPR Fellow, all updated to the latest 2024 or 2025 versions.
-4. **Enhanced result data with **``** field**: This field indicates the citation year of the Fellow's referenced paper, supporting incremental updates based on existing data.
+4. **Enhanced result data with `cite_article_year` field**: This field indicates the citation year of the Fellow's referenced paper, supporting incremental updates based on existing data.
 5. **Implemented citation year filtering**: A new configuration option `citation_since_year` has been added. If a citation is from before a specified year, it is automatically skipped, reducing computational overhead and improving efficiency.
 
 ### Some Questions
